@@ -1,0 +1,25 @@
+const carResources = [
+    { brand: 'Toyota', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Honda', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Ford', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Chevrolet', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Nissan', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'BMW', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Mercedes-Benz', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Hyundai', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Kia', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Volkswagen', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Subaru', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Mazda', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Lexus', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Audi', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Porsche', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Jaguar', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Land Rover', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Infiniti', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Chrysler', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Dodge', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+    { brand: 'Ram', resources: ['Parts Catalog', 'Manuals', 'Wiring Diagrams', 'Diagnostics', 'ECU', 'TSB'] },
+];
+
+export default carResources;
