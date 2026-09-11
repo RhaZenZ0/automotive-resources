@@ -36,7 +36,7 @@ const OEM_CATALOGUES = [
 
 /* Pan-European aftermarket retailers. */
 const EU_RETAILERS = [
-  { name: 'AUTODOC',        url: 'https://www.autodoc.eu/',      note: 'Europe’s largest online parts retailer — 27 countries, 25 languages, ~7.8m parts.' },
+  { name: 'AUTODOC',        url: 'https://www.autodoc.parts/',   note: 'Europe’s largest online parts retailer — 27 countries, ~7.8m parts. Per-country storefronts exist too (autodoc.co.uk, autodoc.de …).' },
   { name: 'kfzteile24',     url: 'https://www.kfzteile24.de/',   note: 'One of Germany’s largest independent parts retailers; strong OE-supplier coverage.' },
   { name: 'Oscaro',         url: 'https://www.oscaro.com/',      note: 'French retailer serving FR/ES/PT, with OE-quality parts and fitment lookup.' },
   { name: 'Mister Auto',    url: 'https://www.mister-auto.com/', note: 'Pan-European retailer with per-country storefronts (mister-auto.de, .ie, .es …).' },
@@ -65,7 +65,7 @@ const ECU_COMMON = [
 
 /* EU recall and safety-campaign databases — the EU counterparts to NHTSA. */
 const RECALLS_COMMON = [
-  { name: 'EU Safety Gate (RAPEX)', url: 'https://ec.europa.eu/rapex',  note: 'The EU rapid alert system. Weekly recall notifications across the 31 EEA countries, free to search.' },
+  { name: 'EU Safety Gate', url: 'https://ec.europa.eu/safety-gate/', note: 'The EU rapid alert system, formerly RAPEX. Weekly alerts across the 31 EEA countries, searchable free by European type-approval number.' },
   { name: 'Car-Recalls.eu',         url: 'https://car-recalls.eu/',     note: 'Weekly-updated EU recall database, browsable by make and model — easier than raw Safety Gate.' },
   { name: 'KBA (Germany)',          url: 'https://www.kba.de/',         note: 'German federal motor transport authority; national recall register and type-approval data.' }
 ];
@@ -247,7 +247,7 @@ const SPECS = {
     manuals: [{ name: 'Toyota-Tech.eu', url: 'https://www.toyota-tech.eu/', note: 'Toyota’s European technical portal for independent operators — repair manuals, bulletins and maintenance schedules. Some content is free.' }],
     wiring:  [{ name: 'Toyota-Tech.eu', url: 'https://www.toyota-tech.eu/', note: 'European electrical wiring diagrams (EWD) by model and market.' }],
     ecu:     [{ name: 'Toyota-Tech.eu', url: 'https://www.toyota-tech.eu/', note: 'Techstream licensing and reprogramming documentation for the European range.' }],
-    tsb:     [{ name: 'Toyota-Tech.eu', url: 'https://www.toyota-tech.eu/', note: 'Service bulletins and campaigns for EU-market Toyotas.' }],
+    tsb:     [{ name: 'Toyota-Tech.eu — Recalls & Campaigns', url: 'https://www.toyota-tech.eu/Euro5Search/Campaigns', note: 'Free recall and campaign lookup for EU-market Toyotas — no subscription needed.' }],
     diag:    [{ name: 'Toyota-Tech.eu', url: 'https://www.toyota-tech.eu/', note: 'Diagnostic procedures and DTC references.' }]
   }
 };
