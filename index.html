@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parts catalogues, official RMI portals, wiring diagrams and diagnostic tools for cars sold in the EU — VW Group, BMW, Mercedes-Benz, Stellantis, Renault, Volvo, Ford and Toyota.">
     <title>🚗 Automotive Resources Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>🚗 Automotive Resources Hub</h1>
-        <p>Select your car brand to find parts, manuals, diagnostic tools, and more</p>
-        
-        <div id="brand-container" class="button-group"></div>
-        <div id="category-container" class="button-group"></div>
-        <div id="links-container" class="results"></div>
-    </div>
+        <p class="lede">Select your car brand to find parts, manuals, wiring diagrams and diagnostic tools — focused on the European market</p>
+
+        <section class="step" id="step-brand">
+            <h2>1 — Brand</h2>
+            <div id="brand-container" class="button-group"></div>
+        </section>
+
+        <section class="step" id="step-category" hidden>
+            <h2>2 — Category</h2>
+            <div id="category-container" class="button-group"></div>
+        </section>
+
+        <section class="step" id="step-links" hidden>
+            <h2 id="links-heading">Resources</h2>
+            <div id="links-container" class="results" aria-live="polite"></div>
+        </section>
+
+        <footer class="site-footer">
+            <p>Each brand links to the manufacturer’s official Repair &amp; Maintenance Information portal, which EU type-approval rules require makers to open to independent operators. Most are paid, usually by the hour, day or month. Security-related data (immobiliser, keys) additionally needs <a href="https://www.vehiclesermi.eu/" target="_blank" rel="noopener noreferrer">SERMI</a> certification.</p>
+            <p>Links open third-party sites and are provided for reference only — verify anything safety-critical against the factory documentation for your VIN.</p>
+            <p>Add or edit entries in <code>data.js</code>; the page picks them up on reload.</p>
+        </footer>
+    </main>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
