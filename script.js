@@ -223,11 +223,19 @@
     }
   }
 
+  /* Each segment is encoded separately, so brand names that themselves contain
+     a slash or non-ASCII ("BMW / MINI", "Citroen / DS", "Skoda") survive a
+     round trip through the hash. */
   function writeHash() {
-    var parts = [];
-    if (selectedBrand) { parts.push(selectedBrand); }
-    if (selectedBrand && selectedPath) { parts.push(selectedPath); }
-    var next = parts.length ? '#/' + parts.join('/') : '#';
+    var segments = [];
+    if (selectedBrand) { segments.push(encodeURIComponent(selectedBrand)); }
+    if (selectedBrand && selectedPath) {
+      var cat = findCategory(selectedBrand, selectedPath);
+      if (cat) {
+        cat.path.forEach(function (part) { segments.push(encodeURIComponent(part)); });
+      }
+    }
+    var next = segments.length ? '#/' + segments.join('/') : '#';
     if (location.hash !== next) {
       suppressHashRead = true;
       location.hash = next;
@@ -236,7 +244,11 @@
 
   function readHash() {
     var raw = location.hash.replace(/^#\/?/, '');
-    var segments = decodeURIComponent(raw).split('/').filter(Boolean);
+    /* Split on the separator first, then decode, so an encoded %2F inside a
+       single segment is never mistaken for a separator. */
+    var segments = raw.split('/').filter(Boolean).map(function (part) {
+      try { return decodeURIComponent(part); } catch (err) { return part; }
+    });
 
     var brandKey = segments.length ? matchKey(Object.keys(data), segments[0]) : null;
     if (!brandKey) {
